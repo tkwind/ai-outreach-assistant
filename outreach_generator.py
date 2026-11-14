@@ -7,7 +7,7 @@ from utils import call_llm  # used internally if needed
 
 
 def main():
-    leads = pd.read_csv("data\\leads.csv")
+    leads = pd.read_csv("data/leads.csv")
 
     scores, priorities, reasons, messages, decision_traces = [], [], [], [], []
 
@@ -44,7 +44,7 @@ def main():
     leads["decision_trace"] = decision_traces
     leads["outreach_message"] = messages
 
-    leads.to_csv("data\\output_messages.csv", index=False)
+    leads.to_csv("data/output_messages.csv", index=False)
     print("\n Agentic workflow completed and saved.")
 
 
